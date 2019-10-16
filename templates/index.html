@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de consultas utilizando imágenes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-6">Diplomado de Inteligencia Artificial - ITLA | Trabajo final</h1>
+                  <p class="lead">Sistema de consultas por imágenes utilizando Redes Neuronales</p>
+                  <p class="lead">Jorge Luis Ventura Silverio | Id: 89355</p>
+                </div>
+        </div>
+
+        <br>
+    <div class="card">
+            <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data" action="{{ url_for('index') }}">
+                        <label for="exampleFormControlFile1">Seleccione la imagen a consultar</label>
+                        <input type="file" name="photo" class="form-control-file" id="exampleFormControlFile1">
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Realizar consulta</button>                            
+                    </form>
+            </div>
+    </div>
+<br>
+<div class="card">
+        <h5 class="card-header">Lista de clases que pueden ser consultadas</h5>
+    <div class="card-body">
+        <h5 class="card-title"></h5>        
+    <table class="table table-sm">
+            <tbody>
+              <tr>
+                <td>Faces</td>
+                <td>Faces_easy</td>
+                <td>Leopards</td>
+                <td>Motorbikes</td>
+                <td>accordion</td>
+              </tr>
+              <tr>
+                <td>airplanes</td>
+                <td>anchor</td>
+                <td>ant</td>
+                <td>barrel</td>
+                <td>bass</td>	  
+              </tr>
+              <tr>
+                <td>beaver</td>
+                <td>binocular</td>
+                <td>bonsai</td>
+                <td>brain</td>
+                <td>brontosaurus</td>	  
+              </tr>
+              <tr>
+                <td>buddha</td>
+                <td>butterfly</td>
+                <td>camera</td>
+                <td>cannon</td>
+                <td>car_side</td>	  
+              </tr>	
+              <tr>
+                <td>ceiling_fan</td>
+                <td>cellphone</td>
+                <td>chair</td>
+                <td>chandelier</td>
+                <td>cougar_body</td>	  
+              </tr>
+              <tr>
+                <td>cougar_face</td>
+                <td>crab</td>
+                <td>crayfish</td>
+                <td>crocodile</td>
+                <td>crocodile_head</td>	  
+              </tr>
+              <tr>
+                <td>cup</td>
+                <td>dalmatian</td>
+                <td>dollar_bill</td>
+                <td>dolphin</td>
+                <td>dragonfly</td>	  
+              </tr>	
+              <tr>
+                    <td>electric_guitar</td>
+                    <td>elephant</td>
+                    <td>emu</td>
+                    <td>euphonium</td>
+                    <td>ewer</td>	  
+              </tr>	
+              <tr>
+                    <td>ferry</td>
+                    <td>flamingo</td>
+                    <td>flamingo_head</td>
+                    <td>garfield</td>
+                    <td>gerenuk</td>	  
+              </tr>	
+              <tr>
+                    <td>gramophone</td>
+                    <td>grand_piano</td>
+                    <td>hawksbill</td>
+                    <td>headphone</td>
+                    <td>hedgehog</td>	  
+              </tr>
+              <tr>
+                    <td>helicopter</td>
+                    <td>ibis</td>
+                    <td>inline_skate</td>
+                    <td>joshua_tree</td>
+                    <td>kangaroo</td>	  
+              </tr>
+              <tr>
+                   <td>ketch</td>
+                    <td>lamp</td>
+                    <td>laptop</td>
+                    <td>llama</td>
+                    <td>lobster</td>	  
+              </tr>
+              <tr>
+                    <td>lotus</td>
+                    <td>mandolin</td>
+                    <td>mayfly</td>
+                    <td>menorah</td>
+                    <td>metronome</td>	  
+              </tr>	
+              <tr>
+                    <td>minaret</td>
+                    <td>nautilus</td>
+                    <td>octopus</td>
+                    <td>okapi</td>
+                    <td>pagoda</td>	  
+              </tr>
+              <tr>
+                    <td>panda</td>
+                    <td>pigeon</td>
+                    <td>pizza</td>
+                    <td>platypus</td>
+                    <td>pyramid</td>	  
+              </tr>
+              <tr>
+                    <td>revolver</td>
+                    <td>rhino</td>
+                    <td>rooster</td>
+                    <td>saxophone</td>
+                    <td>schooner</td>	  
+              </tr>	
+              <tr>
+                    <td>scissors</td>
+                    <td>scorpion</td>
+                    <td>sea_horse</td>
+                    <td>snoopy</td>
+                    <td>soccer_ball</td>	  
+              </tr>	
+              <tr>
+                    <td>stapler</td>
+                    <td>starfish</td>
+                    <td>stegosaurus</td>
+                    <td>stop_sign</td>
+                    <td>strawberry</td>	  
+              </tr>	
+              <tr>
+                    <td>sunflower</td>
+                    <td>tick</td>
+                    <td>trilobite</td>
+                    <td>umbrella</td>
+                    <td>watch</td>	  
+              </tr>
+              <tr>
+                    <td>water_lilly</td>
+                    <td>wheelchair</td>
+                    <td>wild_cat</td>
+                    <td>windsor_chair</td>
+                    <td>wrench</td>	  
+              </tr>		
+            </tbody>
+    </table>
+</div>
+</div>
+
+</body>
+</html>

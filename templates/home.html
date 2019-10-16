@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi primer sitio web con python</title>
+</head>
+<body>
+    <h1>Hello Wordl python</h1>
+    <form action="/" method="POST">        
+        <dl>
+            {{form.csrf_token}}
+        <p>
+            {{form.nombre.label}} <br>
+            {{form.nombre(size=30)}}
+        </p>
+        <p>
+            {{form.apellido.label}} <br>
+            {{form.apellido(size=30)}}
+        </p>
+        <input type="submit" value="Go">            
+        </dl>
+    </form>
+
+</body>
+</html>
